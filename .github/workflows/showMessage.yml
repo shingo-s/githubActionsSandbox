@@ -1,4 +1,4 @@
-name: CI
+name: Show Messages in workflow
 on:
   push:
     branches: [ testWorkFlow* ]
@@ -14,6 +14,6 @@ jobs:
         run: |-
           echo "::debug::Debug Message"
           echo "::warning::Warning Message"
-          echo "::warning file=README.md,line=1,col=1::Warning Message"
+          echo "::warning file=README.md,line=1,col=1::Something wrong"
           echo "::error::Error Message"
           
