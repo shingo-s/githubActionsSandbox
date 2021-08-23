@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  show events:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: |-
+          cat << 'EOF'
+          ${{ github }}
+          EOF
