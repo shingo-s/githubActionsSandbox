@@ -6,7 +6,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
 jobs:
-  show events:
+  showEvents:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
