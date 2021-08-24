@@ -1,0 +1,19 @@
+name: Show Messages in workflow
+on:
+  push:
+    branches: [ testWorkFlow* ]
+  pull_request:
+    branches: [ testWorkFlow* ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: |-
+          echo "::debug::Debug Message"
+          echo "::warning::Warning Message"
+          echo "::warning file=README.md,line=1,col=1::Something wrong"
+          echo "::error::Error Message"
+          
